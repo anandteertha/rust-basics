@@ -3,6 +3,6 @@ pub fn variable2() {
     // num1 = 12; will throw error as by default variables are immutable in rust.
     let mut num2: i8 = 12;
     num2 += 1;
-    println!("num1 is {}", num1);
-    println!("num2 is {}", num2);
+    println!("num1 is {}", num1); //10
+    println!("num2 is {}", num2); //12
 }
