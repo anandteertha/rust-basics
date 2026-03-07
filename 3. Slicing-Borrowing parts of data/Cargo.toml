@@ -1,0 +1,6 @@
+[package]
+name = "Slicing_Borrowing_parts_of_data"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
