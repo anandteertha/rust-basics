@@ -1,7 +1,3 @@
-
-## `interview-helper.md`
-
-```markdown
 # Interview Helper - Project 004: Structs + `impl`
 
 This guide is meant to help you explain this project confidently in interviews and deeply understand the Rust concepts behind it.
