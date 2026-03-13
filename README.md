@@ -41,6 +41,10 @@ Each numbered folder is a self‑contained Cargo project with its own `README.md
   Model a connection lifecycle with an enum (`Disconnected`, `Connecting`, `Connected`, `Failed`) and `match`.  
   Covers **state-aware vs force operations**, controlled transitions, and type-safe state modeling—great for explaining **explicit state machines and pattern matching** in Rust.
 
+- **6. Option_and_Result**  
+  Build toward a small in-memory connection simulator while practicing `Option<T>` and `Result<T, E>`.  
+  This gives you language to talk about **error handling, absence vs failure, and how Rust models recoverable vs unrecoverable conditions** in real programs.
+
 The list above will **grow over time** as new micro‑projects are added (more ownership patterns, error handling, async, concurrency, etc.).  
 Treat this repo as a **living Rust notebook** that keeps expanding as we learn more.
 
@@ -70,7 +74,7 @@ More micro‑projects can be added over time, always with the same philosophy: *
 
 4. **Repeat for the other folders**, in order.
 
-If you are new to Rust, doing **1 → 5 in order** will give you a solid mental model for how Rust’s safety guarantees work.
+If you are new to Rust, doing **1 → 6 in order** will give you a solid mental model for how Rust’s safety guarantees work.
 
 ## Using this as interview prep
 
