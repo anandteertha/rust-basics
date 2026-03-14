@@ -15,7 +15,7 @@ By the end, you will have enough hands‑on practice to **talk confidently about
 - **You have upcoming Rust or systems‑programming interviews** and want something concrete to point to.
 - **You want proof of real understanding**, not just “I watched a tutorial.”
 
-You can literally show this repo to interviewers as **evidence that you understand ownership, borrowing, lifetimes, and safe resource management**—the core of Rust‑style systems design.
+You can literally show this repo to interviewers as **evidence that you understand ownership, borrowing, lifetimes, safe resource management, type-driven design, and reusable abstraction in Rust**.
 
 ## What’s inside (so far)
 
@@ -39,13 +39,17 @@ Each numbered folder is a self‑contained Cargo project with its own `README.md
 
 - **5. Enums_and_Match**  
   Model a connection lifecycle with an enum (`Disconnected`, `Connecting`, `Connected`, `Failed`) and `match`.  
-  Covers **state-aware vs force operations**, controlled transitions, and type-safe state modeling—great for explaining **explicit state machines and pattern matching** in Rust.
+  Covers **state-aware vs force operations**, controlled transitions, and type-safe state modeling. Great for explaining **explicit state machines and pattern matching** in Rust.
 
 - **6. Option_and_Result**  
   Build toward a small in-memory connection simulator while practicing `Option<T>` and `Result<T, E>`.  
   This gives you language to talk about **error handling, absence vs failure, and how Rust models recoverable vs unrecoverable conditions** in real programs.
 
-The list above will **grow over time** as new micro‑projects are added (more ownership patterns, error handling, async, concurrency, etc.).  
+- **7. Traits_and_Generics**  
+  Build a small connection-monitoring style project with multiple concrete connection types like database, API, and cache.  
+  This project teaches **how traits define shared behavior, how generics enable reusable logic across multiple types, and how Rust encourages design around capability instead of hardcoded type branching**.
+
+The list above will **grow over time** as new micro-projects are added (more ownership patterns, error handling, collections, file handling, async, concurrency, etc.).  
 Treat this repo as a **living Rust notebook** that keeps expanding as we learn more.
 
 More micro‑projects can be added over time, always with the same philosophy: **one concept, a tiny program, strong intuition**.
@@ -74,7 +78,7 @@ More micro‑projects can be added over time, always with the same philosophy: *
 
 4. **Repeat for the other folders**, in order.
 
-If you are new to Rust, doing **1 → 6 in order** will give you a solid mental model for how Rust’s safety guarantees work.
+If you are new to Rust, doing **1 → 7 in order** will give you a solid mental model for how Rust’s safety guarantees and abstraction mechanisms work.
 
 ## Using this as interview prep
 
@@ -88,11 +92,16 @@ When preparing for Rust or systems‑programming interviews, this repo helps you
   - How to model resources (files, sockets, connections) using RAII and `Drop`.  
   - How to design APIs that take `&T`, `&mut T`, or owned `T`, and what that signals about performance and safety.
 
+- **Show type-driven design and reusable abstractions**  
+  - How enums model explicit state.  
+  - How traits define behavior contracts.  
+  - How generics let one function work across multiple concrete types safely.
+
 - **Show real, small programs instead of vague claims**  
   - Walk an interviewer through one micro‑project.  
   - Point to specific code and explain what invariants Rust is enforcing for you.
 
-If you work through each project and can explain it in your own words, you will have **strong, concrete proof** that you can reason about **systems design and memory‑safe programming in Rust**.
+If you work through each project and can explain it in your own words, you will have **strong, concrete proof** that you can reason about **systems design, memory‑safe programming, and reusable type-safe abstractions in Rust**.
 
 ## Prerequisites
 
@@ -100,4 +109,3 @@ If you work through each project and can explain it in your own words, you will 
   Install from the official site using `rustup` if needed.
 
 Once that’s set up, everything else you need is already in this repo. Open a folder, run `cargo run`, and learn Rust basics along with me.
-
