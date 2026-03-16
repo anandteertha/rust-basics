@@ -12,8 +12,8 @@ pub struct LogEntry<'a> {
     pub log_type: LogType,
 }
 
-impl LogEntry<'_> {
-    pub fn parse(line: &str) -> Result<LogEntry<'_>, String> {
+impl<'b> LogEntry<'b> {
+    pub fn parse(line: &'b str) -> Result<LogEntry<'b>, String> {
         let logs = line.split_once(":");
         match logs {
             Some((str1, str2)) => {
