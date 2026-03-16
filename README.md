@@ -49,6 +49,9 @@ Each numbered folder is a self‑contained Cargo project with its own `README.md
   Build a small connection-monitoring style project with multiple concrete connection types like database, API, and cache.  
   This project teaches **how traits define shared behavior, how generics enable reusable logic across multiple types, and how Rust encourages design around capability instead of hardcoded type branching**.
 
+- **8. Lifetimes_and_Borrowed_Data**  
+  Parse system status logs into structs that borrow from the original input, so you can **see how lifetimes connect structs that hold references to the data they point into, and how Rust prevents dangling references when returning borrowed views from parsers**.
+
 The list above will **grow over time** as new micro-projects are added (more ownership patterns, error handling, collections, file handling, async, concurrency, etc.).  
 Treat this repo as a **living Rust notebook** that keeps expanding as we learn more.
 
@@ -78,7 +81,7 @@ More micro‑projects can be added over time, always with the same philosophy: *
 
 4. **Repeat for the other folders**, in order.
 
-If you are new to Rust, doing **1 → 7 in order** will give you a solid mental model for how Rust’s safety guarantees and abstraction mechanisms work.
+If you are new to Rust, doing **1 → 8 in order** will give you a solid mental model for how Rust’s safety guarantees and abstraction mechanisms work.
 
 ## Using this as interview prep
 
