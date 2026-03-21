@@ -10,6 +10,9 @@ pub struct Alert {
 }
 
 impl Alert {
+    pub fn get_severity_score(&self) -> u8 {
+        self.severity_score
+    }
     pub fn get_alert_level(&self) -> &AlertLevel {
         &self.alert_level
     }

@@ -7,9 +7,10 @@ mod alert;
 mod alert_level;
 
 fn main() {
+    let alerts = get_mock_alerts();
     // iter
     println!("\n***** iter *****");
-    for alert in get_mock_alerts().iter() {
+    for alert in alerts.iter() {
         alert.print_alert();
     }
 
@@ -18,19 +19,18 @@ fn main() {
     let critical_alerts_closure =
         |alert: &&Alert| matches!(alert.get_alert_level(), AlertLevel::Critical);
 
-    for alert in get_mock_alerts().iter().filter(critical_alerts_closure) {
+    for alert in alerts.iter().filter(critical_alerts_closure) {
         alert.print_alert();
     }
 
     // map
     println!("\n***** map & closure *****");
-    for summary in get_mock_alerts().iter().map(|alert| alert.get_summary()) {
+    for summary in alerts.iter().map(|alert| alert.get_summary()) {
         println!("{}", summary);
     }
 
     // find
     println!("\n***** find *****");
-    let alerts = &get_mock_alerts();
     let unresolved_critical_alert = alerts.iter().find(|alert| {
         matches!(alert.get_alert_level(), AlertLevel::Critical) && !alert.get_is_resolved()
     });
@@ -56,4 +56,10 @@ fn main() {
         "All alerts resolved?\n{}",
         alerts.iter().all(|alert| alert.get_is_resolved())
     );
+
+    // fold
+    println!("\n***** fold *****");
+    let sum_closure = |acc: u8, alert: &Alert| acc + alert.get_severity_score();
+    let sum = alerts.iter().fold(0, sum_closure);
+    println!("The sum of all severity scores from all alerts is {}", sum);
 }

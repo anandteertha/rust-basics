@@ -52,6 +52,10 @@ Each numbered folder is a self‑contained Cargo project with its own `README.md
 - **8. Lifetimes_and_Borrowed_Data**  
   Parse system status logs into structs that borrow from the original input, so you can **see how lifetimes connect structs that hold references to the data they point into, and how Rust prevents dangling references when returning borrowed views from parsers**.
 
+- **9. Iterators_and_Closures**  
+  Walk through a small alert-style dataset (`Alert` + `AlertLevel`) using **`iter`, `filter`, `map`, `find`, `any`, `all`, and `fold`**, with closures passed into iterator methods.  
+  This is where the track shifts toward **idiomatic, declarative data processing** in Rust while ownership and borrowing still apply to what the iterators yield.
+
 The list above will **grow over time** as new micro-projects are added (more ownership patterns, error handling, collections, file handling, async, concurrency, etc.).  
 Treat this repo as a **living Rust notebook** that keeps expanding as we learn more.
 
@@ -81,7 +85,7 @@ More micro‑projects can be added over time, always with the same philosophy: *
 
 4. **Repeat for the other folders**, in order.
 
-If you are new to Rust, doing **1 → 8 in order** will give you a solid mental model for how Rust’s safety guarantees and abstraction mechanisms work.
+If you are new to Rust, doing **1 → 9 in order** will give you a solid mental model for how Rust’s safety guarantees and abstraction mechanisms work.
 
 ## Using this as interview prep
 
@@ -99,6 +103,9 @@ When preparing for Rust or systems‑programming interviews, this repo helps you
   - How enums model explicit state.  
   - How traits define behavior contracts.  
   - How generics let one function work across multiple concrete types safely.
+
+- **Talk about iterators and closures**  
+  - How iterator adapters (`filter`, `map`, `find`, `fold`, etc.) compose, when work actually runs (lazy vs consumed), and how closures supply predicates and transformations.
 
 - **Show real, small programs instead of vague claims**  
   - Walk an interviewer through one micro‑project.  
