@@ -56,6 +56,10 @@ Each numbered folder is a self‑contained Cargo project with its own `README.md
   Walk through a small alert-style dataset (`Alert` + `AlertLevel`) using **`iter`, `filter`, `map`, `find`, `any`, `all`, and `fold`**, with closures passed into iterator methods.  
   This is where the track shifts toward **idiomatic, declarative data processing** in Rust while ownership and borrowing still apply to what the iterators yield.
 
+- **10. Collections_and_File_IO**  
+  Read pipe-separated incident lines from a file, **parse and validate** them into an `Incident` model (`Severity`, `Status`, service, message), collect into **`Vec`**, aggregate counts with **`HashMap`**, reuse logic with a **small generic helper**, and **filter** with iterators for reporting (e.g. unresolved messages).  
+  This is the **integration project** where file I/O, `Result`, enums, structs, collections, generics, and iterators show up in one flow.
+
 The list above will **grow over time** as new micro-projects are added (more ownership patterns, error handling, collections, file handling, async, concurrency, etc.).  
 Treat this repo as a **living Rust notebook** that keeps expanding as we learn more.
 
@@ -85,7 +89,7 @@ More micro‑projects can be added over time, always with the same philosophy: *
 
 4. **Repeat for the other folders**, in order.
 
-If you are new to Rust, doing **1 → 9 in order** will give you a solid mental model for how Rust’s safety guarantees and abstraction mechanisms work.
+If you are new to Rust, doing **1 → 10 in order** will give you a solid mental model for how Rust’s safety guarantees and abstraction mechanisms work.
 
 ## Using this as interview prep
 
@@ -106,6 +110,9 @@ When preparing for Rust or systems‑programming interviews, this repo helps you
 
 - **Talk about iterators and closures**  
   - How iterator adapters (`filter`, `map`, `find`, `fold`, etc.) compose, when work actually runs (lazy vs consumed), and how closures supply predicates and transformations.
+
+- **Discuss collections and practical I/O**  
+  - Reading text with `Result`, parsing into owned types, using `Vec` and `HashMap` for storage and aggregation, and keeping invalid input explicit instead of silent corruption.
 
 - **Show real, small programs instead of vague claims**  
   - Walk an interviewer through one micro‑project.  

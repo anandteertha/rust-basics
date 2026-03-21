@@ -1,0 +1,6 @@
+[package]
+name = "Collections_and_File_IO"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]

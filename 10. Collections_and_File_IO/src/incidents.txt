@@ -1,0 +1,15 @@
+critical|database|unresolved|Primary DB connection timeout
+critical | database|unresolved|Primary DB connection timeout
+warning|auth|resolved|Repeated invalid login attempts detected
+critical|payments|resolved|Payment gateway timeout during checkout
+info|cache|unresolved|Cache miss spike after deployment
+warning|api|unresolved|Slow requests increasing latency
+info|database|resolved|Replica caught up successfully
+critical|auth|unresolved|JWT verification failures across region
+warning|payments|resolved|Refund queue delay
+warning|payments|resolved|
+warning|payments||Refund queue delay
+warning||resolved|Refund queue delay
+|payments|resolved|Refund queue delay
+warming|payments|resolved|Refund queue delay
+warning|payments|success|Refund queue delay
